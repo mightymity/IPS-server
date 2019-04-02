@@ -9,7 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "collections": "^5.1.8",
+    "lodash": "^4.17.11",
     "nodemon": "^1.18.10",
+    "numjs": "^0.16.0",
     "ws": "^6.2.0"
   }
 }
