@@ -31,7 +31,7 @@ class Server:
         self.positionOfR5X = 4
         self.positionOfR5Y = 0
         
-        start_server = websockets.serve(self.hello, '10.94.13.155', 8385)
+        start_server = websockets.serve(self.hello, '192.168.1.6', 8385)
         loop = asyncio.get_event_loop()
         loop.run_until_complete(start_server)
         loop.run_forever()
@@ -51,9 +51,9 @@ class Server:
         #rssi of d0 = 1m
         rssiRefMean = [-58.44]
         nMean = [1.811]
-
+        print("#########1 :",sia)
         output = ast.literal_eval(sia[1][1:]) #20 sample data
-
+        print("#########2 :",output)
 
         if (sia[0] == 'R1' and len(self.buffer1) < 200):
             self.buffer1.extend(output)
@@ -64,7 +64,10 @@ class Server:
         if (sia[0] == 'R5' and len(self.buffer5) < 200):
             self.buffer5.extend(output)
 
+        print(self.buffer3)
         self.buffers = [self.buffer1, self.buffer3, self.buffer4, self.buffer5]
+        print(self.buffers)
+
 
         routerCoord = [[self.positionOfR1X, self.positionOfR1Y], [self.positionOfR3X, self.positionOfR3Y],
                        [self.positionOfR4X, self.positionOfR4Y], [self.positionOfR5X, self.positionOfR5Y]]

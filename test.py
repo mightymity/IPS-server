@@ -1,3 +1,4 @@
-routers = {'R1': 999, 'R3': 999, 'R4': 999, 'R5': 999}
+message = [R1,]
+output = ast.literal_eval(sia[1][1:])
 pi = list(routers.values())
 print(pi)
