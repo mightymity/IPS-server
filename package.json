@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "collections": "^5.1.8",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "lodash": "^4.17.11",
-    "nodemon": "^1.18.10",
+    "nodemon": "^1.18.11",
     "numjs": "^0.16.0",
     "ws": "^6.2.0"
   }
